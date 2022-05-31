@@ -1,0 +1,19 @@
+.button {
+    @include h2-web;
+    @include flex(row, center, center);
+    padding: 1.25rem 1.875rem;
+    color: $white;
+    background: $gradient;
+    border-radius: 15px;
+    border: 0;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 3px 7px 18px #FF6B00;
+    }
+    &_pressed {
+        background: $button-pressed;
+    }
+    &_disabled {
+        background: $button-disabled;
+    }
+}

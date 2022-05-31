@@ -1,0 +1,59 @@
+.header {
+    color: $white;
+    background-color: $black;
+    height: 700px;
+    position: relative;
+    overflow: hidden;
+    &__navbar {
+        height: 130px;
+        @include flex(row, center, space-between)
+    }
+    &__links {
+        width: 74.4%;
+        list-style: none;
+        @include flex(row, center, space-between)
+    }
+    &__link {
+        font-family: 'Inter';
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        text-transform: uppercase;
+        a {
+            text-decoration: none;
+            color: $white;
+        }
+    }
+    &__container {
+        width: 56.3%;
+        margin-top: 65px;
+        @include flex(column, flex-start, flex-start)
+    }
+    &__title {
+        @include h1-web;
+        span {
+            background: $gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    &__subtitle {
+        @include h2-web;
+        margin-top: 20px;
+        margin-bottom: 35px;
+    }
+    &__drone {
+        width: 696px;
+        height: 466px;
+        position: absolute;
+        top: 152px;
+        left: 800px;
+        z-index: 2;
+    }
+    &__blob {
+        width: 600px;
+        position: absolute;
+        top: 98px;
+        right: 0;
+    }
+}

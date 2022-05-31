@@ -1,0 +1,38 @@
+.about {
+    height: 790px;
+    padding: 200px 0;
+    background-color: $white;
+    &__container {
+        @include flex(row, center, space-between )
+    }
+    &__blob {
+        position: relative;
+        width: 475px;
+        height: 410px;
+    }
+    &__image {
+        position: absolute;
+        left: 165px;
+        width: 445px;
+        height: 335px;
+        transform: scale(0.8);
+    }
+    &__info {
+        width: 48.65%;
+        @include flex(column, flex-start, center);
+        padding: 2.5rem 2.5rem 3.125rem 3.125rem;
+        border-radius: 20px;
+        border: 2px solid transparent;
+        background: linear-gradient($white, $white) padding-box, $gradient border-box;
+    }
+    &__title {
+        @include h1-web;
+    }
+    &__subtitle {
+        @include h2-web;
+        margin: 20px 0;
+    }
+    &__paragraph {
+        @include main-web;
+    }
+}
