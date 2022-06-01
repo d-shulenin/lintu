@@ -1,17 +1,20 @@
 .header {
     color: $white;
     background-color: $black;
-    height: 700px;
+    padding-bottom: 8.75rem;
     position: relative;
     overflow: hidden;
     &__navbar {
-        height: 130px;
-        @include flex(row, center, space-between)
+        @include flex(row, center, space-between);
+        height: 8.125rem;
+    }
+    &__logo {
+        width: 17%;
     }
     &__links {
+        @include flex(row, center, space-between);
         width: 74.4%;
         list-style: none;
-        @include flex(row, center, space-between)
     }
     &__link {
         font-family: 'Inter';
@@ -20,14 +23,14 @@
         line-height: 1.5rem;
         text-transform: uppercase;
         a {
-            text-decoration: none;
             color: $white;
+            text-decoration: none;
         }
     }
     &__container {
+        @include flex(column, flex-start, flex-start);
         width: 56.3%;
-        margin-top: 65px;
-        @include flex(column, flex-start, flex-start)
+        margin-top: 4rem;
     }
     &__title {
         @include h1-web;
@@ -39,21 +42,20 @@
     }
     &__subtitle {
         @include h2-web;
-        margin-top: 20px;
-        margin-bottom: 35px;
+        margin-top: 1.25rem;
+        margin-bottom: 2.1875rem;
     }
     &__drone {
-        width: 696px;
-        height: 466px;
+        width: 40%;
         position: absolute;
-        top: 152px;
-        left: 800px;
+        top: 9.5rem;
+        right: 0;
         z-index: 2;
     }
     &__blob {
-        width: 600px;
+        width: 42%;
         position: absolute;
-        top: 98px;
+        top: 6rem;
         right: 0;
     }
 }

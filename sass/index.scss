@@ -1,8 +1,11 @@
 @import './reset/reset';
+@import './base/html';
 @import './base/typography';
 @import './base/colors';
 @import './abstracts/_mixins';
 @import './components/buttons';
+@import './components/inputs';
 @import './layout/wrapper';
 @import './sections/header';
-@import './sections/about'
+@import './sections/about';
+@import './sections/steps';

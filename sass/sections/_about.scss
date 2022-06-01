@@ -1,25 +1,26 @@
 .about {
-    height: 790px;
-    padding: 200px 0;
+    color: $black;
     background-color: $white;
+    padding: 12.5rem 0;
     &__container {
-        @include flex(row, center, space-between )
+        @include flex(row, center, space-between);
+        position: relative;
     }
     &__blob {
+        width: 43%;
         position: relative;
-        width: 475px;
-        height: 410px;
+        top: 0;
+        left: 0;
     }
     &__image {
+        width: 32%;
         position: absolute;
-        left: 165px;
-        width: 445px;
-        height: 335px;
-        transform: scale(0.8);
+        top: 16%;
+        left: 6%;
     }
     &__info {
-        width: 48.65%;
         @include flex(column, flex-start, center);
+        width: 48.65%;
         padding: 2.5rem 2.5rem 3.125rem 3.125rem;
         border-radius: 20px;
         border: 2px solid transparent;
@@ -30,7 +31,7 @@
     }
     &__subtitle {
         @include h2-web;
-        margin: 20px 0;
+        margin: 1.25rem 0;
     }
     &__paragraph {
         @include main-web;
