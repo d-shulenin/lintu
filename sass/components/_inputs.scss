@@ -1,0 +1,26 @@
+.input {
+    @include main-web;
+    @include flex(row, center, flex-start);
+    padding: 0.625rem;
+    color: $black; 
+    border-radius: 15px;
+    border: 2px solid transparent;
+    background: linear-gradient($white, $white) padding-box, $gradient border-box;
+    &:focus {
+        outline: 2px solid transparent;
+        background: linear-gradient($white, $white) padding-box, $gradient border-box;
+    }
+    &_inactive {
+        border: 2px solid $input;
+        background: $inactive;
+    }
+    &_success {
+        border: 2px solid $success;
+    }
+    &_warning {
+        border: 2px solid $warning;
+    }
+    &_fail {
+        border: 2px solid $fail;
+    }
+}

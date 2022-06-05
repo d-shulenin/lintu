@@ -1,0 +1,105 @@
+.steps {
+    color: $white;
+    background-color: $black;
+    text-align: center;
+    position: relative;
+    padding: 4.375rem 0 7.5rem;
+    &__right-blob {
+        width: 18.5%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    &__title {
+        @include h1-web;
+    }
+    &__subtitle {
+        @include large-web;
+        margin-top: 1.5625rem;
+    }
+    &__container {
+        margin-top: 2.5rem;
+    }
+    &__numbers {
+        @include flex(row, center, space-between)
+    }
+    &__number {
+        @include accent-web;
+        text-align: center;
+        width: 16rem;
+    }
+    &__descriptions {
+        display: grid;
+        grid-template-columns: 1fr 1.4fr 1fr;
+        grid-column-gap: 8rem;
+        margin-top: 0.625rem;
+    }
+    &__description {
+        @include main-web;
+        text-align: center;
+    }
+    &__dash {
+        width: 10rem;
+        height: 0px;
+        border: 1px solid $white;
+    }
+    &__left-blob {
+        width: 14%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .steps {
+        padding: 3.125rem 0;
+        &__right-blob {
+            display: none;
+        }
+        &__title {
+            @include h1-mob;
+        }
+        &__subtitle {
+            @include large-mob;
+            margin-top: 1.25rem;
+        }
+        &__container {
+            @include flex(row, flex-start, space-between);
+            margin-top: 1.25rem;
+        }
+        &__numbers {
+            @include flex(column, flex-start, space-between);
+            width: 24.6%;
+            height: 18rem;
+        }
+        &__number {
+            @include accent-mob;
+            background: $gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            width: 100%;
+        }
+        &__descriptions {
+            @include flex(column, flex-start, space-between);
+            width: 67.77%;
+            height: 18.5rem;
+            margin-top: 0;
+            padding-top: 0.5rem;
+        }
+        &__description {
+            @include main-mob;
+            text-align: left;
+        }
+        &__dash {
+            width: 400%;
+            height: 1px;
+            background: $gradient;
+            border: none;
+        }
+        &__left-blob {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,135 @@
+.footer {
+    color: $white;
+    background-color: $black;
+    position: relative;
+    overflow: hidden;
+    padding: 2.5rem 0 3.125rem;
+    &__container {
+        @include flex(row, center, space-between)
+    }
+    &__left-side {
+        @include flex(row, center, space-between);
+        width: 40%;
+    }
+    &__contacts {
+        text-align: center;
+    }
+    &__logo {
+        height: 3.75rem;
+    }
+    &__phone {
+        @include footer-web;
+        margin-top: 2.5rem;
+    }
+    &__address {
+        @include footer-web;
+        margin-top: 1rem; 
+    }
+    &__links {
+        list-style: none;
+        text-align: center;
+    }
+    &__link {
+        @include footer-web;
+        margin-top: 1rem;
+        cursor: pointer;
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+    &__link:first-child {
+        margin-top: 0;
+    }
+    &__middle-logo {
+        height: 105%;
+        position: absolute;
+        right: 25%;
+    }
+    &__right-side {
+        @include flex(column, center, flex-start);
+        width: 14.5%;
+        button {
+            border: 0;
+            background: none;
+            margin-bottom: 1.125rem;
+            img {
+                width: 100%;
+            }
+            cursor: pointer;
+        }
+    }
+    &__socials {
+        @include flex(row, center, space-between);
+        width: 100%;
+    }
+    &__social {
+        height: 1.875rem;
+    } 
+}
+
+@media screen and (max-width: 375px) {
+    .footer {
+        padding: 2.5rem 0;
+        &__container {
+            @include flex(column, center, flex-start);
+        }
+        &__left-side {
+            @include flex(column, center,  flex-start);
+            width: 100%;
+        }
+        &__logo {
+            height: 3.125rem;
+        }
+        &__phone {
+            @include footer-mob;
+            margin-top: 1.25rem;
+        }
+        &__address {
+            @include footer-mob;
+            margin-top: 0.3125rem; 
+        }
+        &__link {
+            @include footer-mob;
+            margin-top: 1.25rem;
+            cursor: pointer; 
+            &:first-child {
+                margin-top: 1.875rem;
+            }
+            a {
+                color: $white;
+                text-decoration: none;
+            }
+        }
+        &__middle-logo {
+            display: none;
+        }
+        &__right-side {
+            display: grid;
+            grid-template-areas: 'socials socials'
+                                 'one         two';
+            grid-column-gap: 0.9375rem;
+            grid-row-gap: 1.25rem;
+            width: 100%;
+            margin-top: 1.5625rem;
+            button {
+                margin-bottom: 0;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        &__button-one {
+            grid-area: one;
+        }
+        &__button-two {
+            grid-area: two;
+        }
+        &__socials {
+            @include flex(row, center, space-between);
+            grid-area: socials;
+            justify-self: center;
+            width: 37%;
+        }
+    }
+}

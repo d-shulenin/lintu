@@ -1,0 +1,78 @@
+.form {
+    color: $black;
+    background-color: $white;
+    padding: 3.75rem 0 9rem;
+    position: relative;
+    &__title {
+        @include h1-web;
+    }
+    &__subtitle {
+        @include large-web;
+        margin-top: 1.875rem;
+        span {
+            color: $button-pressed;
+        }
+    }
+    &__inputs {
+        @include flex(column, flex-start, flex-start);
+        margin-top: 2.5rem;
+    }
+    .input_form {
+        width: 50%;
+        margin-bottom: 1.875rem;
+    }
+    &__blob {
+        width: 40%;
+        position: absolute;
+        right: 5%;
+        top: 10rem;
+    }
+    &__drone {
+        width: 35%;
+        position: absolute;
+        right: 7.3%;
+        top: 11.25rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .form {
+        padding: 1.875rem 0 2.1875rem;
+        &__title {
+            @include h1-mob;
+        }
+        &__subtitle {
+            @include large-mob;
+            margin-top: 0.625rem;
+            span {
+                color: $black;
+            }
+        }
+        &__inputs {
+            width: 100%;
+            margin-top: 17.5rem;
+        }
+        .input_form {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 0.75rem;
+        }
+        .button {
+            width: 100%;
+            @include large-mob;
+            padding: 0.9375rem 5.15625rem;
+        }
+        &__blob {
+            width: 86.7%;
+            position: absolute;
+            left: 5%;
+            top: 12rem;
+        }
+        &__drone {
+            width: 86.7%;
+            position: absolute;
+            left: 6%;
+            top: 13rem;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+.delivery {
+    color: $white;
+    background-color: $white;
+    padding: 6.25rem 0;
+    &__container {
+        background: $gradient;
+        border-radius: 15px;
+        padding: 2.5rem 4rem 4.375rem;
+        text-align: center;
+    }
+    &__title {
+        @include h1-web;
+    }
+    &__options {
+        display: grid;
+        grid-template-columns: 1fr 1.25fr 1fr;
+        grid-template-areas: 'one   drone two'
+                             'three drone four';
+        grid-column-gap: 1.875rem;
+        grid-row-gap: 1.25rem;
+        margin-top: 1.875rem;
+    }
+    &__option {
+        @include large-web;
+        @include flex(row, center, center);
+        border: 2px solid $white;
+        border-radius: 10px;
+        padding: 0.625rem 0;
+        &_one {
+            grid-area: one;
+        }
+        &_two {
+            grid-area: two;
+        }
+        &_three {
+            grid-area: three;
+        }
+        &_four {
+            grid-area: four;
+        }
+    }
+    &__drone {
+        width: 100%;
+        grid-area: drone;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .delivery {
+        padding: 1.5625rem 0 0.625rem;
+        &__container {
+            border-radius: 15px;
+            padding: 1.875rem 1.5625rem 2.1875rem;
+            text-align: center;
+        }
+        &__title {
+            @include h1-mob;
+        }
+        &__options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 'drone drone'
+                                 'one   two'
+                                 'three three'
+                                 'four  four';
+            grid-column-gap: 0.3125rem;
+            grid-row-gap: 0.625rem;
+            margin-top: 1.25rem;
+        }
+        &__option {
+            @include main-mob;
+            @include flex(row, center, center);
+            border: 1px solid $white;
+            border-radius: 5px;
+            padding: 0.3125rem 0.625rem;
+        }
+        &__drone {
+            width: 47.7%;
+            grid-area: drone;
+            justify-self: center;
+        }
+    }
+}

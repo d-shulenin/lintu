@@ -1,0 +1,37 @@
+.partners {
+    color: $white;
+    background-color: $black;
+    padding-top: 3.75rem; 
+    text-align: center;
+    &__title {
+        @include h1-web;
+    }
+    &__logos {
+        @include flex(row, center, space-between);
+        background-color: rgba(146, 146, 146, 0.1);
+        border-width: 1px 0px;
+        border-style: solid;
+        border-color: #FFFFFF;
+        padding: 2.8125rem 11.8%;
+        margin-top: 2.5rem;
+        img {
+            height: 3.75rem;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .partners {
+        padding-top: 1.5625rem;
+        &__title {
+            @include h1-mob;
+        } 
+        &__logos {
+            padding: 0.9375rem 6.7%;
+            margin-top: 1.5625rem;
+            img {
+                height: 1.4rem;
+            }
+        }
+    }
+}

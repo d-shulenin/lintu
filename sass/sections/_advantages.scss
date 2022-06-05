@@ -1,0 +1,60 @@
+.advantages {
+    color: $black;
+    background-color: $white;
+    padding: 9.375rem 0;
+    text-align: center;
+    &__title {
+        @include h1-web
+    }
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 1.875rem;
+        margin-top: 3.75rem;
+    }
+    .advantage {
+        @include flex(column, center, flex-start);
+        &__image {
+            width: 27.5%;
+        }
+        &__title {
+            @include h2-web;
+            margin-top: 2rem;
+        }
+        &__subtitle {
+            @include main-web;
+            margin-top: 0.625rem;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .advantages {
+        padding: 1.875rem 0 3.4375rem;
+        &__title {
+            @include h1-mob;
+        }
+        &__container {
+            @include flex(column, center, flex-start);
+            margin-top: 0;
+        }
+        .advantage {
+            @include flex(column, center, flex-start);
+            width: 100%;
+            margin-top: 1.25rem;
+            &:first-child {
+                margin-top: 1.5625rem;
+            }
+            &__image {
+                width: 16%; 
+            }
+            &__title {
+                @include h2-mob;
+                margin-top: 0.3125rem;
+            }
+            &__subtitle {
+                display: none;
+            }
+        }
+    }
+}
