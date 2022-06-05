@@ -8,28 +8,34 @@
     <title>Lintu</title>
 </head>
 <body>
-    <header class="header">
+    <script src="./index.js" type="text/javascript" defer></script>
+    <header class="header" id="header">
         <div class="wrapper">
             <nav class="header__navbar">
                 <img class="header__logo" src="assets/images/header/logo.svg" alt="logo">
                 <ul class="header__links">
-                    <li class="header__link"><a href="#">О нас</a></li>
-                    <li class="header__link"><a href="#">Преимущества</a></li>
-                    <li class="header__link"><a href="#">Партнеры</a></li>
-                    <li class="header__link"><a href="#">Доставка</a></li>
+                    <li class="header__link"><a href="#about">О нас</a></li>
+                    <li class="header__link"><a href="#advantages">Преимущества</a></li>
+                    <li class="header__link"><a href="#partners">Партнеры</a></li>
+                    <li class="header__link"><a href="#delivery">Доставка</a></li>
                     <li class="header__link"><a href="#">+7-925-334-96-11</a></li>
                 </ul>
+                <div class="header__burger">
+                    <div class="dash"></div>
+                    <div class="dash"></div>
+                    <div class="dash"></div>
+                </div>
             </nav>  
             <div class="header__container">
-                <h1 class="header__title">Доставка<br> малогабаритных грузов <br>при помощи <span>дронов</span></h1>
-                <h2 class="header__subtitle">Быстро доставим любые посылки, <br>даже самые хрупкие.</h2>
+                <h1 class="header__title">Доставка малогабаритных грузов при помощи <span>дронов</span></h1>
+                <h2 class="header__subtitle">Быстро доставим любые посылки, даже самые хрупкие.</h2>
                 <button class="button">Заказать доставку</button>
             </div>  
             <img class="header__drone" src="./assets/images/header/drone_main.svg" alt="drone">
             <img class="header__blob" src="./assets/images/header/blob_line.svg" alt="blob">
         </div>
     </header>
-    <section class="about">
+    <section class="about" id="about">
         <div class="wrapper">
             <div class="about__container">
                 <img class="about__blob" src="/assets/images/about/blob_aboutus.svg" alt="blob">
@@ -59,14 +65,14 @@
                 </div>
                 <div class='steps__descriptions'>
                     <p class="steps__description">Вы заполняете заявку и оформляете заказ</p>
-                    <p class="steps__description">Дрон прилетает за посылкой в течение часа после подтверждения заказа</p>
+                    <p class="steps__description">Дрон прилетает за посылкой в течение часа после подтверждения</p>
                     <p class="steps__description">Посылка доставляется прямо до двери адресата в течение 24 часов</p>
                 </div>        
             </div>
         </div>
     <img class="steps__left-blob" src="./assets/images/steps/blob_left.svg" alt="blob">
     </section>
-    <section class="advantages">
+    <section class="advantages" id="advantages">
         <div class="wrapper">
             <h1 class="advantages__title">Преимущества</h1>
             <div class="advantages__container">
@@ -90,7 +96,7 @@
             </div>
         </div>
     </section>
-    <section class="partners">
+    <section class="partners" id="partners">
         <h1 class="partners__title">Наши партнеры</h1>
         <div class="partners__logos">
             <img src="./assets/images/partners/calm_driving.svg" alt="logo">
@@ -127,15 +133,15 @@
         </div>
         <img class="reviews__left-blob" src="./assets/images/reviews/blob_left.svg" alt="blob">
     </section>
-    <section class="delivery">
+    <section class="delivery" id="delivery">
         <div class="wrapper">
             <div class="delivery__container">
                 <h1 class="delivery__title">Мы доставляем</h1>
                 <div class="delivery__options">
-                    <div class="delivery__option delivery__option_one">Посылки с хрупким содержимым</div>
-                    <div class="delivery__option delivery__option_two">Пакеты до 5 кг</div>
-                    <div class="delivery__option delivery__option_three">Медикаменты</div>
-                    <div class="delivery__option delivery__option_four">Малогабаритные грузы до 15 кг</div>
+                    <div class="delivery__option delivery__option_one">Пакеты до 5 кг</div>
+                    <div class="delivery__option delivery__option_two">Медикаменты</div>
+                    <div class="delivery__option delivery__option_three">Малогабаритные грузы до 15 кг</div>
+                    <div class="delivery__option delivery__option_four">Посылки с хрупким содержимым</div>
                     <img class="delivery__drone" src="./assets/images/delivery/drone_png.svg" alt="drone">
                 </div>
             </div>
@@ -165,17 +171,17 @@
                         <p class="footer__address">г. Москва, ул. Тверская, 17</p>
                     </div>
                     <ul class="footer__links">
-                        <li class="footer__link"><a href="#">Главная</a></li>
-                        <li class="footer__link"><a href="#">О нас</a></li>
-                        <li class="footer__link"><a href="#">Преимущества</a></li>
-                        <li class="footer__link"><a href="#">Партнеры</a></li>
-                        <li class="footer__link"><a href="#">Доставка</a></li>
+                        <li class="footer__link"><a href="#header">Главная</a></li>
+                        <li class="footer__link"><a href="#about">О нас</a></li>
+                        <li class="footer__link"><a href="#advantages">Преимущества</a></li>
+                        <li class="footer__link"><a href="#partners">Партнеры</a></li>
+                        <li class="footer__link"><a href="#delivery">Доставка</a></li>
                     </ul>
                 </div>
                 <img class='footer__middle-logo' src="./assets/images/footer/lintu_logo_pic.svg" alt="logo">
                 <div class="footer__right-side">
-                    <button><img src="./assets/images/footer/app_store.svg" alt="app store"></button>
-                    <button><img src="./assets/images/footer/google_play.svg" alt="google play"></button>
+                    <button class="footer__button-one"><img src="./assets/images/footer/app_store.svg" alt="app store"></button>
+                    <button class="footer__button-two"><img src="./assets/images/footer/google_play.svg" alt="google play"></button>
                     <div class="footer__socials">
                         <a href="#"><img class="footer__social" src="./assets/images/footer/VK_ic.svg" alt="vk"></a>
                         <a href="#"><img class="footer__social" src="./assets/images/footer/Telegram_ic.svg" alt="telegram"></a>

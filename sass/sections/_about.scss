@@ -15,7 +15,7 @@
     &__image {
         width: 32%;
         position: absolute;
-        top: 16%;
+        top: 5rem;
         left: 6%;
     }
     &__info {
@@ -35,5 +35,43 @@
     }
     &__paragraph {
         @include main-web;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .about {
+        padding: 1.875rem 0 1.5625rem 0;
+        &__container {
+            @include flex(column, center, space-between);
+            position: relative;
+        }
+        &__blob {
+            width: 100%;
+            position: relative;
+        }
+        &__image {
+            width: 80%;
+            position: absolute;
+            top: 2.5rem;
+            left: 10%;
+        }
+        &__info {
+            width: 100%;
+            margin-top: 2.5rem;
+            padding: 1.5625rem 1.25rem 1.875rem 1.5625rem;
+            border-radius: 20px;
+            border: 2px solid transparent;
+            background: linear-gradient($white, $white) padding-box, $gradient border-box;
+        }
+        &__title {
+            @include h1-mob;
+        }
+        &__subtitle {
+            @include main-mob;
+            margin: 0.625rem 0;
+        }
+        &__paragraph {
+            @include main-mob;
+        }
     }
 }

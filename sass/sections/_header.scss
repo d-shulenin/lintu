@@ -6,7 +6,7 @@
     overflow: hidden;
     &__navbar {
         @include flex(row, center, space-between);
-        height: 8.125rem;
+        padding: 1.875rem 0;
     }
     &__logo {
         width: 17%;
@@ -27,6 +27,15 @@
             text-decoration: none;
         }
     }
+    &__burger {
+        display: none;
+        width: 1.875rem;
+        height: 1.25rem;
+        .dash {
+            width: 100%;
+            border: 1px solid $white;
+        }
+    }
     &__container {
         @include flex(column, flex-start, flex-start);
         width: 56.3%;
@@ -42,20 +51,69 @@
     }
     &__subtitle {
         @include h2-web;
+        width: 70%; 
         margin-top: 1.25rem;
         margin-bottom: 2.1875rem;
     }
     &__drone {
-        width: 40%;
+        width: 48.3%;
         position: absolute;
         top: 9.5rem;
-        right: 0;
+        right: -8%;
         z-index: 2;
     }
     &__blob {
-        width: 42%;
+        height: 37rem;
         position: absolute;
         top: 6rem;
-        right: 0;
+        right: -7%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header {
+        padding-bottom: 3.4375rem;
+        &__navbar {
+            @include flex(row, center, space-between);
+            padding: 1.4375rem 0;
+        }
+        &__links {
+            display: none;
+        }
+        &__burger {
+            @include flex(column, center, space-between);
+        }
+        &__logo {
+            width: 30%;
+        }
+        &__container {
+            width: 100%;
+            margin-top: 0.625rem;
+        }
+        &__title {
+            @include h1-mob;
+        }
+        &__subtitle {
+            @include h2-mob;
+            width: 100%;
+            margin-bottom: 22.5rem;
+        }
+        .button {
+            @include large-mob;
+            padding: 1.25rem 5.15625rem;
+        }
+        &__drone {
+            width: 87%;
+            position: absolute;
+            top: 23rem;
+            right: 5%;
+            z-index: 2;
+        }
+        &__blob {
+            height: 18rem;
+            position: absolute;
+            top: 21rem;
+            right: 5%;
+        }
     }
 }
