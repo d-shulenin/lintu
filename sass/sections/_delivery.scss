@@ -24,8 +24,8 @@
         @include large-web;
         @include flex(row, center, center);
         border: 2px solid $white;
-        border-radius: 10px;
-        padding: 0.625rem 0;
+        border-radius: 0.625rem;
+        padding: 0.625rem;
         &_one {
             grid-area: one;
         }
@@ -42,10 +42,11 @@
     &__drone {
         width: 100%;
         grid-area: drone;
+        align-self: center;
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 540px) {
     .delivery {
         padding: 1.5625rem 0 0.625rem;
         &__container {
@@ -71,8 +72,7 @@
             @include main-mob;
             @include flex(row, center, center);
             border: 1px solid $white;
-            border-radius: 5px;
-            padding: 0.3125rem 0.625rem;
+            padding: 0.3125rem 0;
         }
         &__drone {
             width: 47.7%;

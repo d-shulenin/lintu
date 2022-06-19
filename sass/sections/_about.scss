@@ -22,7 +22,7 @@
         @include flex(column, flex-start, center);
         width: 48.65%;
         padding: 2.5rem 2.5rem 3.125rem 3.125rem;
-        border-radius: 20px;
+        border-radius: 1.25rem;
         border: 2px solid transparent;
         background: linear-gradient($white, $white) padding-box, $gradient border-box;
     }
@@ -38,9 +38,9 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 540px) {
     .about {
-        padding: 1.875rem 0 1.5625rem 0;
+        padding: 1.875rem 0 3rem 0;
         &__container {
             @include flex(column, center, space-between);
             position: relative;
@@ -59,9 +59,6 @@
             width: 100%;
             margin-top: 2.5rem;
             padding: 1.5625rem 1.25rem 1.875rem 1.5625rem;
-            border-radius: 20px;
-            border: 2px solid transparent;
-            background: linear-gradient($white, $white) padding-box, $gradient border-box;
         }
         &__title {
             @include h1-mob;

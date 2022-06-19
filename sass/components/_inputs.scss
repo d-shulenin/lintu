@@ -1,9 +1,10 @@
 .input {
     @include main-web;
     @include flex(row, center, flex-start);
+    width: 50%;
     padding: 0.625rem;
     color: $black; 
-    border-radius: 15px;
+    border-radius: 0.9375rem;
     border: 2px solid transparent;
     background: linear-gradient($white, $white) padding-box, $gradient border-box;
     &:focus {
@@ -22,5 +23,11 @@
     }
     &_fail {
         border: 2px solid $fail;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .input {
+        width: 100%;
     }
 }

@@ -8,6 +8,7 @@
     }
     &__subtitle {
         @include large-web;
+        width: 66%;
         margin-top: 1.875rem;
         span {
             color: $button-pressed;
@@ -17,8 +18,7 @@
         @include flex(column, flex-start, flex-start);
         margin-top: 2.5rem;
     }
-    .input_form {
-        width: 50%;
+    &__input {
         margin-bottom: 1.875rem;
     }
     &__blob {
@@ -35,7 +35,7 @@
     }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 540px) {
     .form {
         padding: 1.875rem 0 2.1875rem;
         &__title {
@@ -43,6 +43,7 @@
         }
         &__subtitle {
             @include large-mob;
+            width: 100%;
             margin-top: 0.625rem;
             span {
                 color: $black;
@@ -50,29 +51,25 @@
         }
         &__inputs {
             width: 100%;
-            margin-top: 17.5rem;
+            margin-top: calc(-53vw + 2.1875rem);
         }
-        .input_form {
-            width: 100%;
-            border-radius: 10px;
+        &__input {
             margin-bottom: 0.75rem;
-        }
-        .button {
-            width: 100%;
-            @include large-mob;
-            padding: 0.9375rem 5.15625rem;
+            &:last-child {
+                margin-bottom: 1rem;
+            }
         }
         &__blob {
-            width: 86.7%;
-            position: absolute;
-            left: 5%;
-            top: 12rem;
+            width: 86%;
+            position: relative;
+            left: 9%;
+            top: 6.7vw;
         }
         &__drone {
-            width: 86.7%;
-            position: absolute;
-            left: 6%;
-            top: 13rem;
+            width: 84%;
+            position: relative;
+            left: 9%;
+            top: -53vw;
         }
     }
 }

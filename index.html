@@ -20,19 +20,28 @@
                     <li class="header__link"><a href="#delivery">Доставка</a></li>
                     <li class="header__link"><a href="#">+7-925-334-96-11</a></li>
                 </ul>
-                <div class="header__burger">
-                    <div class="dash"></div>
-                    <div class="dash"></div>
-                    <div class="dash"></div>
-                </div>
+                <button class="header__burger" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                    <svg viewBox="0 0 100 100">
+                      <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                      <path class="line line2" d="M 20,50 H 80" />
+                      <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                    </svg>
+                </button>
+                <ul class="header__menu">
+                    <li><a href="#header">Главная</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#advantages">Преимущества</a></li>
+                    <li><a href="#partners">Партнеры</a></li>
+                    <li><a href="#delivery">Доставка</a></li>
+                </ul>
             </nav>  
             <div class="header__container">
                 <h1 class="header__title">Доставка малогабаритных грузов при помощи <span>дронов</span></h1>
                 <h2 class="header__subtitle">Быстро доставим любые посылки, даже самые хрупкие.</h2>
+                <img class="header__drone" src="./assets/images/header/drone_main.svg" alt="drone">
+                <img class="header__blob" src="./assets/images/header/blob_line.svg" alt="blob">
                 <button class="button">Заказать доставку</button>
             </div>  
-            <img class="header__drone" src="./assets/images/header/drone_main.svg" alt="drone">
-            <img class="header__blob" src="./assets/images/header/blob_line.svg" alt="blob">
         </div>
     </header>
     <section class="about" id="about">
@@ -151,14 +160,14 @@
         <div class="wrapper">
             <h1 class="form__title">Откройте для себя инновационную доставку</h1>
             <h2 class="form__subtitle">Оформите заявку и получите <span>500 рублей</span> на первую доставку</h2>
-            <div class="form__inputs">
-                <input class='input input_form' type="text" placeholder="ФИО">
-                <input class='input input_form' type="text" placeholder="Ваш e-mail">
-                <input class='input input_form' type="text" placeholder="+7">
-            </div>
-            <button class="button">Заказать доставку</button>
             <img class="form__blob" src="./assets/images/form/blob_form_block.svg" alt="blob">
             <img class="form__drone" src="./assets/images/form/drone_form_block.svg" alt="drone">
+            <div class="form__inputs">
+                <input class='input form__input' type="text" placeholder="ФИО">
+                <input class='input form__input' type="text" placeholder="Ваш e-mail">
+                <input class='input form__input' type="text" placeholder="+7">
+            </div>
+            <button class="button">Заказать доставку</button>
         </div>
     </section>
     <footer class="footer">
